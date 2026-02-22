@@ -17,21 +17,21 @@ The step-by-step guideline is provided below:
 ## 🚀 Step 1: Set Up Web Application
 ## 🏥 Step 2: Set Up the REST Service in HealthConnect Management Portal
 
-1. 🔑 **Navigate to Web Application Setup**  
+1. **Navigate to Web Application Setup**  
    Go to: `System Administration → Security → Application → Web Application`.
 
-2. ➕ **Create a New Web Application**  
+2. **Create a New Web Application**  
    - Click **"Create New Web Application"**  
    - Enter the **Name** of the application  
    - Optionally, provide a **Description**  
    - For **Namespace**, select the appropriate namespace  
 
-3. ⚡ **Enable REST**  
+3.  **Enable REST**  
    - Click on **REST** to enable the service  
    - Enter the **Dispatch Class**  
    - Select **"Unauthenticated"** (password setup will be explained later)  
 
-4. 💾 **Save Your Configuration**  
+4. **Save Your Configuration**  
    - Click **"Save"**  
    - Refer to **Screenshot 2** for an example  
 
@@ -43,13 +43,13 @@ The step-by-step guideline is provided below:
 
 ### A. Create Class – `GetRequestDatasets`
 
-1. 📂 **Open Cache Studio**  
+1.  **Open Cache Studio**  
    - Select the appropriate **namespace** (the one you set up previously).
 
-2. ➕ **Create a New Class**  
+2.  **Create a New Class**  
    - Go to `File → New → General → Class Definition → OK`.
 
-3. 📝 **Enter Class Details**  
+3.  **Enter Class Details**  
    - **Package Name:** *(your chosen package)*  
    - **Class Name:** `GetRequestDatasets`  
 
@@ -61,10 +61,10 @@ The step-by-step guideline is provided below:
 
 ⚠️ **Note:** You can add or remove properties according to your requirements.
 
-1. ➕ **Create a New Class**  
+1.  **Create a New Class**  
    - Class Name: `SetResponseDatasets`  
 
-2. 📝 **Add the Code**  
+2.  **Add the Code**  
    - Write the required code for the class  
    - Compile the class  
 
@@ -74,10 +74,10 @@ The step-by-step guideline is provided below:
 
 ### C. Create Business Process – `QueryRequestResponse`
 
-1. ➕ **Create a New Business Process**  
+1.  **Create a New Business Process**  
    - Name: `QueryRequestResponse`  
 
-2. 📝 **Add the Code**  
+2.  **Add the Code**  
    - Write the required code for the business process  
    - Compile it  
 
@@ -89,10 +89,10 @@ The step-by-step guideline is provided below:
 
 ### D. Create Business Service – `GetRequest`
 
-1. ➕ **Create a New Business Service**  
+1.  **Create a New Business Service**  
    - Name: `GetRequest`  
 
-2. 📝 **Add the Code**  
+2.  **Add the Code**  
    - Write the required code for the business service  
    - Compile it  
 
@@ -102,10 +102,10 @@ The step-by-step guideline is provided below:
 
 ### E. Create REST Handler – `RestHandler`
 
-1. ➕ **Create a New REST Handler**  
+1.  **Create a New REST Handler**  
    - Name: `RestHandler`  
 
-2. 📝 **Add the Code**  
+2.  **Add the Code**  
    - Write the required code for the REST handler  
    - Compile it  
 
@@ -147,54 +147,54 @@ Give the names (services, processes, operations) according to your requirements.
 
 If you don’t already have it, download and install **Postman** to test the REST interface.
 
-### 🔹 Test Case 1: Request with a Valid Patient MRN
+###  Test Case 1: Request with a Valid Patient MRN
 
-1. 🌐 **Send a GET Request**  
+1.  **Send a GET Request**  
    - URL: `https://......restapi/Patient?MRN=510800`  
    - Method: **GET**  
 
-2. ✅ **Verify the Response**  
+2.  **Verify the Response**  
    - Check that the returned data matches the patient record for MRN `510800`.  
 
 📸 **Screenshot 10:** Output of Test Case 1
 
 ![REST API](images/TestCase1.png)
 
-### 🔹 Test Case 2: Request with a Valid Patient MRN (Alternative URL)
+###  Test Case 2: Request with a Valid Patient MRN (Alternative URL)
 
-1. 🌐 **Send a GET Request**  
+1.  **Send a GET Request**  
    - URL: `https://......restapi/510800`  
    - Method: **GET**  
 
-2. ✅ **Verify the Response**  
+2.  **Verify the Response**  
    - Ensure the returned data matches the patient record for MRN `510800`.  
 
 📸 **Screenshot 11:** Output of Test Case 2
 
 ![REST API](images/TestCase2.png)
 
-### 🔹 Test Case 3: Request with an Invalid Patient MRN
+###  Test Case 3: Request with an Invalid Patient MRN
 
-1. 🌐 **Send a GET Request**  
+1.  **Send a GET Request**  
    - URL: `https://......restapi/Patient?MRN=INVALID_MRN`  
    - Method: **GET**  
 
-2. ⚠️ **Verify the Response**  
+2.  **Verify the Response**  
    - The system should return an error message or indicate that no record was found.  
 
 📸 **Screenshot 12:** Output of Test Case 3
 
 ![REST API](images/TestCase3.png)
 
-### 🔹 Test Case 4: Management Portal Services Disabled
+###  Test Case 4: Management Portal Services Disabled
 
-1. ⚠️ **Scenario**  
+1.  **Scenario**  
    - If the services in the Management Portal are disabled, requests to the REST API will not succeed.  
 
-2. 🌐 **Send a Request**  
+2.  **Send a Request**  
    - Try sending a GET request to your REST endpoint.  
 
-3. ❌ **Expected Output**  
+3.  **Expected Output**  
    - The system will display a message indicating that the services are disabled.  
 
 📸 **Screenshot 13(a):** Disabled Services – Output of Test Case 4
@@ -205,7 +205,7 @@ If you don’t already have it, download and install **Postman** to test the RES
 
 ![REST API](images/TestCase5.png)
 
-### 🔹 Visual Trace of Messages
+###  Visual Trace of Messages
 
 To better understand the flow of requests and responses, you can view the **message visual trace** in the Studio.
 
@@ -233,10 +233,10 @@ This section provides a basic method to set up a **username and password** for a
 
 ### 1. Initial Unauthorized Access
 
-1. 🌐 **Send a Request Without Credentials**  
+1.  **Send a Request Without Credentials**  
    - Attempt to access the REST endpoint using Postman **without a username or password**.  
 
-2. ❌ **Expected Result**  
+2.  **Expected Result**  
    - The system will return an **unauthorized error** indicating that authentication is required.
 
 📸 **Screenshot 1:** Unauthorized Access
@@ -245,10 +245,10 @@ This section provides a basic method to set up a **username and password** for a
 
 ## 👤 Step 1: Create a Limited-Access User Account
 
-1. 🔑 **Navigate to User Management**  
+1.  **Navigate to User Management**  
    - Go to: `System Administrator → Security → Users`.
 
-2. ➕ **Create a New User**  
+2.  **Create a New User**  
    - Click **"Create New User"**  
    - Enter a **Username** (e.g., `Test`)  
    - Fill in other details: **Name**, **Comment**, etc.  
@@ -257,7 +257,7 @@ This section provides a basic method to set up a **username and password** for a
 
 📸 **Screenshot 2:** Creating a New User
 
-3. 🛡️ **Assign Roles**  
+3.  **Assign Roles**  
    - Navigate to the **Roles** section  
    - Select the appropriate **%DB_...** role  
    - Click **Assign**  
@@ -270,15 +270,15 @@ This section provides a basic method to set up a **username and password** for a
 
 ![REST API](images/Password2.png)
 
-## 🔍 Step 2: Verify the User Account
+##  Step 2: Verify the User Account
 
-1. 🔒 **Log Out from the Management Portal**  
+1.  **Log Out from the Management Portal**  
    - End your current session as the admin user.
 
-2. 👤 **Log In with the New User**  
+2.  **Log In with the New User**  
    - Use the **username** and **password** you created (e.g., `Test` / `restTest764`).  
 
-3. ✅ **Verify Access**  
+3.  **Verify Access**  
    - Ensure the user has **limited access** as per the assigned roles.  
    - Confirm the user can only access the intended REST services and no other administrative functions.
 
@@ -293,14 +293,14 @@ This section provides a basic method to set up a **username and password** for a
 ⚠️ **Note:**  
 - The username and password must match the credentials created in the Management Portal.
 
-1. 🌐 **Go to a Base64 Encoder**  
+1.  **Go to a Base64 Encoder**  
    - Example: [https://base64.guru/converter/encode/text](https://base64.guru/converter/encode/text)
 
-2. 📝 **Enter the Credentials**  
+2.  **Enter the Credentials**  
    - Format: `Username:Password`  
    - Example: `Test:Test123`
 
-3. 📄 **Copy the Encoded Value**  
+3.  **Copy the Encoded Value**  
    - This BASE64 value will be used for authorization in Postman or other REST clients.
 
 📸 **Screenshot 5:** BASE64 Encoding of Username and Password
@@ -309,12 +309,12 @@ This section provides a basic method to set up a **username and password** for a
 
 ## 🔑 Step 4: Set Up the Password in Postman
 
-1. 💻 **Open Postman**  
+1.  **Open Postman**  
    - Launch Postman on your system.
 
-2. ⚙️ **Go to the "Headers" Tab**  
+2.  **Go to the "Headers" Tab**  
 
-3. 📝 **Enter Authorization Header**  
+3.  **Enter Authorization Header**  
    - **Key:** `Authorization`  
    - **Value:** `Basic <your_base64_encoded_value>`  
 
@@ -327,24 +327,24 @@ This section provides a basic method to set up a **username and password** for a
 
 ## 🧪 Step 5: Test the REST API with Authenticated User
 
-1. 🌐 **Send the Request in Postman**  
+1.  **Send the Request in Postman**  
    - Ensure the **Authorization header** is set with your BASE64 credentials.  
    - Use the same endpoint you configured in the Management Portal.
 
-2. ✅ **Verify the Response**  
+2.  **Verify the Response**  
    - If everything is set up correctly, the REST API will return a valid response.  
 
-3. 📄 **Example Response**  
+3.  **Example Response**  
    - *(This is an example response from a successful request using my setup.)*  
 
 ![REST API](images/Password6.png)
 
 ## 🏁 Conclusion: Providing Access to End Users
 
-1. 🔑 **Share the BASE64 Credentials**  
+1.  **Share the BASE64 Credentials**  
    - Provide the **Base64-encoded username and password** to your end users so they can access the REST API.  
 
-2. ⚠️ **Security Note**  
+2.  **Security Note**  
    - This is a **basic authentication approach** and is **not the most secure** method.  
    - For a more secure authentication approach using **JWT / OAuth2.0**, refer to this InterSystems Community article: [Generate JWT / OAuth2.0 Signature](https://community.intersystems.com/post/generate-jwt-oauth20-signature) 
    - You can read more about JWT in my other article.  
