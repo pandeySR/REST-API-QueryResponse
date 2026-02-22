@@ -6,4 +6,4 @@ This guideline provides an overview of how to design and implement a REST API in
 🚨 **Note: You can modify or add code and other features according to your requirements. This is just a basic guideline I’ve created for quick solutions.**
 
 # Screenshot 1: A High-Level Message Process Diagram.
-![HighLevelDiagram](images/HighLevelDiagram.PNG)
+![High LevelDiagram](images/HighLevelDiagram.PNG)
