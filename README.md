@@ -36,6 +36,7 @@ The step-by-step guideline is provided below:
    - Refer to **Screenshot 2** for an example  
 
 📸 **Screenshot 2:** Web Application and Setting Up REST
+
 ![Web Application](images/WebApplicationSetup.png)
 
 ## 🛠️ Step 2: Create Required Classes
@@ -53,6 +54,7 @@ The step-by-step guideline is provided below:
    - **Class Name:** `GetRequestDatasets`  
 
 📸 **Screenshot 3:** Code for `GetRequestDatasets`
+
 ![Web Application](images/Code-GetRequestDatasets.png)
 
 ### B. Create Response Datasets Class – `SetResponseDatasets`
@@ -67,6 +69,7 @@ The step-by-step guideline is provided below:
    - Compile the class  
 
 📸 **Screenshot 4:** Code for `SetResponseDatasets`
+
 ![Web Application](images/Code-SetResponseDatasets.png)
 
 ### C. Create Business Process – `QueryRequestResponse`
@@ -79,6 +82,7 @@ The step-by-step guideline is provided below:
    - Compile it  
 
 📸 **Screenshot 5:** Code for Business Process – `QueryRequestResponse`
+
 ![Web Application](images/Code-BusinessProcess.png)
 
 ⚠️ **Note:** `"404 Not Found"` is just a display message; you can configure this differently if needed.
@@ -93,6 +97,7 @@ The step-by-step guideline is provided below:
    - Compile it  
 
 📸 **Screenshot 6:** Code for Business Service – `GetRequest`
+
 ![Web Application](images/Code-BusinessServices.png)
 
 ### E. Create REST Handler – `RestHandler`
@@ -105,6 +110,7 @@ The step-by-step guideline is provided below:
    - Compile it  
 
 📸 **Screenshot 7:** Code for `RestHandler`
+
 ![Web Application](images/Code-RestHandler.png)
 
 ### ✅ Final Layout in Studio
